@@ -1,5 +1,7 @@
 N = 1000;
 
+%2.A
+faces = [1 2 3 4];
 p = [0.1 0.2 0.4 0.3]; % probability of each face
 P = [0 cumsum(p)] ;
 roll = zeros(N,1); % vector to hold results of each roll
@@ -24,6 +26,7 @@ end
 Prob_roll
 total_Prob_roll = sum(Prob_roll)
 
+%2.B
 figure(1)
 histogram(roll,4)
 
@@ -38,3 +41,17 @@ hold on
 plot(x,y)
 hold off
 
+%2.C
+figure(4);
+bar(faces, p);
+grid on;
+
+rolls = randsrc(1, 1000, [faces; p]);
+
+[counts, edges] = histcounts(rolls, 'BinMethod', 'integers', 'Normalization', 'probability');
+
+cumsum_hist = cumsum(counts);
+
+figure(5);
+bar(faces, counts);
+grid on;
