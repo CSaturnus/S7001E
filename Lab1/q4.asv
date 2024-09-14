@@ -28,24 +28,25 @@ end
 disp(Prob_signal);
 
 %4.D
-N = 100000;
-p = 0.001;
+N = 10000000;
+p_error = 0.001;
+n_bits = 100;
 
-n_less_2_error = 0;
-n_given_less_2_error = 0;
+n_blocks_with_less_than_2_errors = 0;
+n_blocks_with_no_errors_given_less_than_2 = 0;
 
 for i = 1:N
-    bits = rand(1, 100) < (1 - p);
+    bits = rand(1, n_bits) < (1 - p_error);
     num_errors = sum(~bits);
     
     if num_errors < 2
-        n_less_2_error = n_less_2_error + 1;
+        n_blocks_with_less_than_2_errors = n_blocks_with_less_than_2_errors + 1;
         
         if num_errors == 0
-            n_given_less_2_error = n_given_less_2_error + 1;
+            n_blocks_with_no_errors_given_less_than_2 = n_blocks_with_no_errors_given_less_than_2 + 1;
         end
     end
 end
 
-result = n_given_less_2_error / n_less_2_error;
-disp([1-result, result])
+simulated_probability = n_blocks_with_no_errors_given_less_than_2 / n_blocks_with_less_than_2_errors
+disp(result - 1, result)

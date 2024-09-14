@@ -1,3 +1,4 @@
+%3.B
 N = 1000;
 
 p_1 = [1/6 1/6 1/6 1/6 1/6 1/6]; % probability of each face
@@ -43,6 +44,8 @@ for i=1:N
 end
 
 figure(1)
+
+%3.D
 bar(Togheter_chance_odd_or_even) %First value is even, second is odd.
 
 Togheter_chance_odd_or_even_2 = zeros(1,2); %First value is greater than 2, second is 2.

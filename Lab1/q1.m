@@ -21,9 +21,11 @@ for i=1:length(p)
     Prob_roll(1,i) = length(find(roll==i))/N;
 end
 
+%1.A
 Prob_roll
 total_Prob_roll = sum(Prob_roll)
 
+%1.B
 figure(1)
 histogram(roll,6)
 
@@ -33,6 +35,7 @@ x = linspace(min(roll), max(roll), 1000);
 y = pdf('Normal',x,mean(roll),std(roll))
 plot(x,y)
 
+%1.C
 figure(3)
 histogram(roll,6,'Normalization','pdf')
 hold on
