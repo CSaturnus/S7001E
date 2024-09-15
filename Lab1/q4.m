@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 N_blocks = 1000;
 
 N = 100;
@@ -18,7 +17,9 @@ for k = 1:N_blocks
                 Transmission(i) = j-1;
                 break
             end
-=======
+        end
+    end
+end
 %4.B
 N = 10000;
 
@@ -37,7 +38,6 @@ for i = 1:N
         if P(j-1) < x && x < P(j)
             Transmission(i) = j - 1;
             break;
->>>>>>> 818edee27f0eeea034d56b87ef491fc8b521015c
         end
     end
 
@@ -55,14 +55,11 @@ for i = 1:N
 
 end
 
-<<<<<<< HEAD
 Transmission_succes/N_blocks
-=======
 Prob_signal = zeros(1, length(p));
 for i = 1:length(p)
     Prob_signal(1, i) = sum(Transmission == (i - 1)) / N;
 end
->>>>>>> 818edee27f0eeea034d56b87ef491fc8b521015c
 
 disp(Prob_signal);
 
