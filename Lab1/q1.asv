@@ -27,7 +27,7 @@ total_Prob_roll = sum(Prob_roll)
 
 %1.B
 figure(1)
-histogram(roll, 6, 'Normalization', 'probability');
+histogram(roll, 6, 'Normalization', 'pdf');
 
 theoretical_pdf = ones(1, 6) * 1/6;
 
@@ -38,4 +38,4 @@ bar(1:6, theoretical_pdf);
 figure(3);
 histogram(roll, 6, 'Normalization', 'pdf'); % Normalizing as a PDF
 hold on;
-bar(1:6, theoretical_pdf, 'LineWidth', 1.5); % Plotting the theoretical PDF on top
+bar(1:6, theoretical_pdf'LineWidth', 1.5); % Plotting the theoretical PDF on top
