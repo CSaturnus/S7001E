@@ -36,6 +36,7 @@ bar(1:6, theoretical_pdf);
 %1.C
 
 figure(3);
-histogram(roll, 6, 'Normalization', 'pdf'); % Normalizing as a PDF
+histogram(roll, 6, 'Normalization', 'probability'); % Normalizing as a PDF
 hold on;
 bar(1:6, theoretical_pdf, 'LineWidth', 1.5); % Plotting the theoretical PDF on top
+hold off

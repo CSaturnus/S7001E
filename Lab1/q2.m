@@ -26,32 +26,20 @@ end
 Prob_roll
 total_Prob_roll = sum(Prob_roll)
 
+
 %2.B
 figure(1)
-histogram(roll,4)
+histogram(roll, 4, 'Normalization', 'probability');
 
-figure(2)
-x=linspace(1,4,1000)
-y = pdf('Normal',x,mean(roll),std(roll))
-plot(x,y)
+theoretical_pdf = p;
 
-figure(3)
-histogram(roll,4,'Normalization','pdf')
-hold on
-plot(x,y)
-hold off
+figure(2);
+bar(1:4, theoretical_pdf);
 
-%2.C
+% 2.C
 figure(4);
-bar(faces, p);
-grid on;
 
-rolls = randsrc(1, 1000, [faces; p]);
-
-[counts, edges] = histcounts(rolls, 'BinMethod', 'integers', 'Normalization', 'probability');
-
-cumsum_hist = cumsum(counts);
-
-figure(5);
-bar(faces, counts);
-grid on;
+bar(cumsum(p))
+hold on
+bar(1:4, p, 'LineWidth', 1.5); % Plotting the theoretical PDF on top
+hold off

@@ -14,7 +14,7 @@ mean_X_2 = mean(X_2)  % mean
 V_2 = var(X_2) % Variance
 
 x = linspace(min(X_2), max(X_2), 1000);
-y = pdf('Normal',x,mean_X_2,sqrt(V_2));
+y = pdf('Normal',x, mu, sigma);
 
 figure(1);
 histogram(X_2, 'Normalization', 'pdf');
