@@ -26,4 +26,7 @@ Between_1_2 = find(X_2 >= 1 & X_2 <= 2);
 Amount_Between_1_2 = length(Between_1_2);
 Fraction_in_point = Amount_Between_1_2 / N_2
 
-erf((2-mu)/sigma)-erf((1-mu)/sigma)
+% DO NOT USE!!!!!!!!!!!!!!!
+% The erf function in matlab is different to the actual erf function 
+% erf((2-mu)/sigma)-erf((1-mu)/sigma)
+% DO NOT USE!!!!!!!!!!!!!!!
