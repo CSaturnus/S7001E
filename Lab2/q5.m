@@ -28,3 +28,8 @@ Y_hat = k.*L + R;
 
 audiowrite("sepnewspaper1.wav",X_hat/max(abs(X_hat)),fs)
 audiowrite("sepnewspaper2.wav",Y_hat/max(abs(Y_hat)),fs)
+
+plot(k)
+ylabel("k value")
+xlabel("measurment")
+title("k value of measurment")
