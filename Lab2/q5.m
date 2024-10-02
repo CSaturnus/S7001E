@@ -18,7 +18,7 @@ for i=2:length(X)
     R2=(1-lambda)*X(i-1,2)^2+lambda*R2;
     LR =(1-lambda)*L(i-1)*R(i-1)+lambda*LR;
 
-    dQdk = 2*(k(i-1)*L2^2+LR+k(i-1)*sqrt(L2)*sqrt(R2)+k(i-1)*R2)*(L2+LR+sqrt(L2)+R2+2*sqrt(R2));
+    dQdk = 2*(2*LR*k(i-1)+R2+L2)*(LR*k(i-1)^2+(R2+L2)*k(i-1)+LR);
 
     k(i) = k(i-1) - Step_size * sign(dQdk);
 end
