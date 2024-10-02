@@ -31,5 +31,5 @@ audiowrite("sepnewspaper2.wav",Y_hat/max(abs(Y_hat)),fs)
 
 plot(k)
 ylabel("k value")
-xlabel("measurment")
-title("k value of measurment")
+xlabel("measurement")
+title("k value of measurement")
