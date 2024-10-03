@@ -18,4 +18,3 @@ plot(x_values, theoretical_gaussian, 'LineWidth', 2);
 xlabel('Value');
 ylabel('Probability Density');
 grid on;
-hold off;  % Release the plot hold

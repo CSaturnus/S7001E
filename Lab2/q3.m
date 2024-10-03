@@ -19,7 +19,6 @@ for N = N_values
     for b = bins
         figure;
         histogram(X, b, 'Normalization', 'pdf');
-        title(['Histogram (N = ', num2str(N), ', Bins = ', num2str(b), ')']);
         xlabel('x');
         ylabel('f_X(x)');
     end
