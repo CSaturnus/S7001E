@@ -49,3 +49,10 @@ disp(samplecorr(1,2));
 
 figure(2)
 plot(Y1,Y2,'.')
+
+%g)
+filtered_Y2 = Y2(Y1 > 5);
+prob_empirical = mean(filtered_Y2 > 2 & filtered_Y2 < 3);
+
+disp("Answer for g")
+disp(prob_empirical)
