@@ -30,4 +30,3 @@ end
 plot(x, pdf_theoretical, 'LineWidth', 2);
 xlabel('x');
 ylabel('PDF');
-hold off;

@@ -12,6 +12,7 @@ ylabel('f_X(x)');
 %b)
 N_values = [1000, 10000, 20000]; 
 bins = [20, 50, 100]; 
+n = 0;
 
 for N = N_values
     X = mu + sigma * randn(N, 1); 
@@ -19,8 +20,9 @@ for N = N_values
     for b = bins
         figure;
         histogram(X, b, 'Normalization', 'pdf');
-        title(['Histogram (N = ', num2str(N), ', Bins = ', num2str(b), ')']);
         xlabel('x');
         ylabel('f_X(x)');
+        %saveas(gcf,num2str(n),'png')
+        n = n+1;
     end
 end
