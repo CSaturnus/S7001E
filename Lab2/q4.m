@@ -1,19 +1,13 @@
-
-% Define the number of points
 n = 10000;
 
-% Generate X1 and X2
-X1 = normrnd(3, sqrt(2), [1, n]);  % Gaussian distribution with mean 3, variance 2
-X2 = normrnd(1, 1, [1, n]);        % Gaussian distribution with mean 1, variance 1
+X1 = normrnd(3, sqrt(2), [1, n]);  
+X2 = normrnd(1, 1, [1, n]);        
 
-% Define the transformation matrix
 A = [1/2 3;
      1   1];
 
-% Compute Y1 and Y2
 Y = A * [X1; X2];
 
-% Extract Y1 and Y2 from the matrix Y
 Y1 = Y(1, :);
 Y2 = Y(2, :);
 
