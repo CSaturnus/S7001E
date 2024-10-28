@@ -34,7 +34,12 @@ stem(lag_plot,abs(fftRyy))
 title("Power spectral density Ryy[k]")
 
 Ryx = xcorr(y, x, lag);
- 
+
+figure(9)
+stem(lag_plot,Ryx)
+title("Cross-correlation Ryx[k]")
+
+
 MSE = zeros(1, max_M-1);
 
 for M = 2:max_M
