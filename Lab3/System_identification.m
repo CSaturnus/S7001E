@@ -27,10 +27,10 @@ fftRyy = fft(Ryy);
 fftRxy = fft(Rxy);
 
 figure(4)
-stem(lag_plot,abs(fftRxx))
+stem(lag_plot(lag+1:end),abs(fftRxx(lag+1:end)))
 title("Power spectral density Rxx[k]")
 figure(5)
-stem(lag_plot,abs(fftRyy))
+stem(lag_plot(lag+1:end),abs(fftRyy(lag+1:end)))
 title("Power spectral density Ryy[k]")
 
 Ryx = xcorr(y, x, lag);
