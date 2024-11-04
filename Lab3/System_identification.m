@@ -22,9 +22,9 @@ figure(3)
 stem(lag_plot,Rxy)
 title("Cross-correlation Rxy[k]")
 
-fftRxx = fft(Rxx);
-fftRyy = fft(Ryy);
-fftRxy = fft(Rxy);
+fftRxx = fftshift(fft(Rxx));
+fftRyy = fftshift(fft(Ryy));
+fftRxy = fftshift(fft(Rxy));
 
 figure(4)
 stem(lag_plot(lag+1:end),abs(fftRxx(lag+1:end)))
